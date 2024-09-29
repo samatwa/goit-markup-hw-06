@@ -1,4 +1,9 @@
 /* #region Variables */
+:root {
+--items: 1;
+--indent-col: 48px;
+--indent-row: var(--indent-col);
+}
 
 /* #endregion */
 
@@ -37,6 +42,10 @@ body {
   color: #434455;
   background-color: #ffffff;
 }
+
+.no-scroll {
+  overflow: hidden;
+}
 /* #endregion */
 
 /* #region Common */
@@ -54,7 +63,13 @@ body {
 }
 
 .section {
-  padding: 120px 0;
+  padding: 96px 0;
+}
+
+@media only screen and (min-width: 1158px) {
+  .section {
+    padding: 120px 0;
+  }
 }
 
 .logo {
@@ -76,17 +91,37 @@ body {
 }
 
 .container {
-  width: 1158px;
+  /* width: 100%; */
+  max-width: 320px;
+  padding: 0 16px;
   margin: 0 auto;
-  padding: 0 15px;
 }
+
+@media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .container {
+    max-width: 1158px;
+    padding: 0 15px;
+  }
+}
+
 /* #endregion */
 
 /* #region Card set */
 .card-set {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  row-gap: var(--indent-row);
+  column-gap: var(--indent-col);
+}
+
+.card-set-item {
+  width: calc((100% - var(--indent-col) * (var(--items) - 1)) / var(--items));
 }
 
 /* #endregion */
@@ -245,7 +280,7 @@ body {
   margin: 0 auto;
   background: #2e2f42;
   padding: 188px 0;
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(
@@ -415,7 +450,13 @@ body {
 
 /* #region Portfolio */
 .portfolio {
-  padding: 120px 0;
+  padding: 96px 0;
+}
+
+@media only screen and (min-width: 1158px) {
+  .portfolio {
+    padding: 120px 0;
+  }
 }
 
 .portfolio-card-overlay {
@@ -441,12 +482,29 @@ body {
 
 .portfolio-list {
   background: #ffffff;
-  row-gap: 48px;
-  column-gap: 24px;
+  /* --items: 1;
+  --indent-col: 0;
+  --indent-row: 48px; */
+}
+
+@media only screen and (min-width: 768px) {
+  .portfolio-list {
+    --items: 2;
+    --indent-col: 24px;
+    --indent-row: 72px;
+  }
+}
+
+@media only screen and (min-width: 1158px) {
+  .portfolio-list {
+    --items: 3;
+    --indent-row: 48px;
+  }
 }
 
 .portfolio-title {
   min-width: 218px;
+  margin: 0 auto;
   margin-bottom: 72px;
   font-weight: 700;
   font-size: 36px;
@@ -506,7 +564,7 @@ body {
 
 /* #region Footer */
 .footer {
-  display: flex;
+  /* display: flex; */
   align-items: baseline;
   font-family: inherit;
   background-color: #2e2f42;
@@ -673,7 +731,13 @@ body {
 .backdrop.is-open {
   opacity: 1;
   visibility: visible;
-  pointer-events: all;
+  pointer-events: initial;
+}
+
+.backdrop.is-open .modal {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  transition-delay: 600ms;
 }
 
 .modal {
