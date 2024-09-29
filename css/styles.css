@@ -89,6 +89,10 @@ body {
 }
 
 .container {
+<<<<<<< HEAD
+=======
+  /* width: 100%; */
+>>>>>>> 0b7dd0ee93a48c7653043cf155b25593a0666ee7
   max-width: 320px;
   padding: 0 16px;
   margin: 0 auto;
