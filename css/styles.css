@@ -779,14 +779,36 @@ body {
     text-align: center;
     gap: 72px;
   }
-
   
+  .footer-left {
+    margin: 0 auto;
+  }
+
+  .footer-form {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .footer-socials {
+    margin: 0 auto;
+  }
+
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1157.98px) {
+  .footer-container {
+    margin: 0;
+    flex-wrap: wrap;
+    row-gap: 72px;
+    width: 564px;
+    width: 100%;
+  }
 }
 
 .footer-socials {
   display: flex;
   flex-direction: column;
-  margin-right: auto;
+  margin-right: 96px;
 }
 
 .footer-socials-list {
