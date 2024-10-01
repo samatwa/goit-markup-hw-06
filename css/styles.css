@@ -310,10 +310,9 @@ body {
 
 /* #region Hero */
 .hero {
-  max-width: 1440px;
+  max-height: 432px;
   margin: 0 auto;
   background: #2e2f42;
-  padding-bottom: 96px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -327,20 +326,22 @@ body {
     url(../images/hero/bg-mob@1x.jpg);
 }
 
+.btn {
+  margin-bottom: 72px;
+}
+
 .hero-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   text-align: center;
 }
 
 .hero-title {
-  min-width: 216px;
-  margin-bottom: 72px;
+  max-width: 216px;
+  margin: 72px;
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11; 
   letter-spacing: 0.02em;
   text-align: center;
   color: #fff;
@@ -358,6 +359,7 @@ body {
 
 @media only screen and (min-width: 768px) {
   .hero {
+    max-height: 436px;
     padding-bottom: 120px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
@@ -367,8 +369,14 @@ body {
   }
 
   .hero-title {
+    font-size: 56px;
+    line-height: 1.07;
     max-width: 496px;
     margin-bottom: 36px;
+  }
+
+  .btn {
+    margin-bottom: 48px;
   }
 }
 
@@ -384,6 +392,8 @@ body {
 
 @media only screen and (min-width: 1158px) {
   .hero {
+    max-width: 1440px;
+    max-height: 600px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -513,6 +523,10 @@ body {
   }
 }
 
+.team-info-container {
+  padding: 32px 0;
+}
+
 .team-list {
   --items: 1;
   --indent-col: 0px;
@@ -520,6 +534,9 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+  .team-container {
+    width: 584px;
+  }
   .team-list {
     --items: 2;
     --indent-col: 24px;
@@ -540,9 +557,7 @@ body {
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
 }
 
-.team-container {
-  padding: 32px 0;
-}
+
 
 .team-card {
   width: 100%;
@@ -851,7 +866,7 @@ body {
   .footer-socials {
     display: flex;
     flex-direction: column;
-    margin-right: 96px;
+    margin-right: 80px;
   }
 }  
 
@@ -1195,7 +1210,7 @@ input[type='checkbox']:checked + .checkbox > .checkbox-icon {
   width: 100dvw;
   height: 100dvh;
   padding: 72px 16px 40px;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: space-between;
   transform: translateX(100%);
