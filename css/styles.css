@@ -537,6 +537,7 @@ body {
   .team-container {
     width: 584px;
   }
+
   .team-list {
     --items: 2;
     --indent-col: 24px;
@@ -545,6 +546,10 @@ body {
 }
 
 @media only screen and (min-width: 1158px) {
+  .team-container {
+    width: 100%;
+  }
+
   .team-list {
     --items: 4;
     --indent-col: 24px;
@@ -1210,7 +1215,7 @@ input[type='checkbox']:checked + .checkbox > .checkbox-icon {
   width: 100dvw;
   height: 100dvh;
   padding: 72px 16px 40px;
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   transform: translateX(100%);
