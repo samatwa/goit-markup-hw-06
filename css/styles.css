@@ -533,7 +533,7 @@ body {
   --indent-row: 72px;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) and (max-width: 1157.99px) {
   .team-container {
     width: 584px;
   }
@@ -546,10 +546,6 @@ body {
 }
 
 @media only screen and (min-width: 1158px) {
-  .team-container {
-    width: 1158px;
-  }
-
   .team-list {
     --items: 4;
     --indent-col: 24px;
